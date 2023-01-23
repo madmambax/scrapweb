@@ -5,7 +5,7 @@ email: mann.m@seznam.cz
 discord: Martin M.#4226
 """
 
-# import modules and packages for projdet
+# import modules and packages for project
 import argparse
 import bs4
 import sys
