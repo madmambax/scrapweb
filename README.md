@@ -48,7 +48,7 @@ Help for scrap program run
    -o OUTPUT, --Output OUTPUT 
                        CSV output file for elections results (default: None)
 
-## Example of the program running
+## Example of the program running from terminal
 
 
 ## Partial output
