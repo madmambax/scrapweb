@@ -42,11 +42,14 @@ Ouput is simple help for set program parameters.
 
 Help for scrap program run
 
-  options:
-   -h, --help            show this help message and exit
-   -u URL, --Url URL     Region URL for scrap. (default: None)
-   -o OUTPUT, --Output OUTPUT 
-                       CSV output file for elections results (default: None)
+options:
+
+-h, --help  show this help message and exit
+
+-u URL, --Url URL  Region URL for scrap. (default: None)
+
+-o OUTPUT, --Output OUTPUT CSV output file
+                    for elections results (default: None)
 
 ## Example of the program running from terminal
 
