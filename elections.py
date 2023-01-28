@@ -184,9 +184,6 @@ def elections(uri, out_f):
         print("There is some problem, probably invalid link, ending...")
         quit()
 
-# debug purpose
-# part_out = get_parties__result()
-# print(part_out)
 
 # elections main run for scrap
 if __name__ == '__main__':
