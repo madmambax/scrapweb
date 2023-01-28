@@ -97,3 +97,99 @@ def get_ids():
     for i_d in ids:
         town_ids.append(i_d.text)
     return town_ids
+
+# Return list of candidate parties
+def get_listofparties():
+    parties_collection = []
+    town_p = get_paths()
+    html = requests.get(town_p[0])
+    html_municipal = bs4.BeautifulSoup(html.text, "html.parser")
+    parties = html_municipal.find_all("td", "overflow_name")
+    for part in parties:
+        parties_collection.append(part.text)
+    return parties_collection
+
+# summary for voters, attendance and valid vote
+def get_summary_voters():
+    paths = get_paths()
+    for path in paths:
+        html_path = requests.get(path)
+        html_municipal = bs4.BeautifulSoup(html_path.text, "html.parser")
+        votes = html_municipal.find_all("td", headers="sa2")
+        for vote in votes:
+            vote = vote.text
+            people_votes.append(vote.replace('\xa0', ' '))
+
+        attendance = html_municipal.find_all("td", headers="sa3")
+        for attend in attendance:
+            attend = attend.text
+            attendance_votes.append(attend.replace('\xa0', ' '))
+
+        valid_v = html_municipal.find_all("td", headers="sa6")
+        for valid in valid_v:
+            valid = valid.text
+            valid_votes.append(valid.replace('\xa0', ' '))
+
+# take html output from paths
+def get_html_path(link):
+    get_html_link = requests.get(link)
+    html_link = bs4.BeautifulSoup(get_html_link.text, "html.parser")
+    print("Download links from URL:", link)
+    return html_link
+
+# Take results for parties
+def get_parties_result():
+    path_p = get_paths()
+    votes_party = []
+    for path in path_p:
+        html = get_html_path(path)
+        vote_find = html.find_all("td", "cislo", headers=["t1sb4", "t2sb4"])
+        temp = []
+        for vote in vote_find:
+            temp.append(vote.text + ' %')
+        votes_party.append(temp)
+    return votes_party
+
+# Create row output for csv file
+def create_rows_output():
+    rows_out = []
+    get_summary_voters()
+    towns = get_towns()
+    ids = get_ids()
+    votes = get_parties_result()
+    zipped = zip(ids, towns, people_votes, attendance_votes, valid_votes)
+    join_zipped = []
+    for idn, town, pvs, att, vvs in zipped:
+        join_zipped.append([idn, town, pvs, att, vvs])
+    zip_joined_votes = zip(join_zipped, votes)
+    for jz, vs in zip_joined_votes:
+        rows_out.append(jz + vs)
+    return rows_out
+
+# create csv file, driving by main function, check if links is valid for election web
+def elections(uri, out_f):
+    try:
+        headers = ['Kód obce', 'Název obce', 'Voliči v seznamu', 'Vydané obálky', 'Platné hlasy']
+        bodies = create_rows_output()
+        parties = get_listofparties()
+        print("SAVING DATA TO FILE: ", out_f)
+        for party in parties:
+            headers.append(party)
+        with open(out_f, 'w', newline='') as f:
+            f_writer = csv.writer(f)
+            f_writer.writerow(headers)
+            f_writer.writerows(bodies)
+        print("ENDING...:", uri)
+    except IndexError:
+        print("There is some problem, probably invalid link, ending...")
+        quit()
+
+# debug purpose
+# part_out = get_parties__result()
+# print(part_out)
+
+# elections main run for scrap
+if __name__ == '__main__':
+    link_path = uri
+    out_file = out_f
+    elections(link_path, out_file)

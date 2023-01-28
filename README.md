@@ -53,5 +53,26 @@ options:
 
 ## Example of the program running from terminal
 
+> DOWNLOAD DATA FROM URL: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2104
+> 
+> Download links from URL: https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=533173&xvyber=2104
+> 
+> Download links from URL: https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=533181&xvyber=2104
+> 
+> .......................
+> .......................
+> ,,,,,,,,,,,,,,,,,,,,,,,
+> 
+> Download links from URL: https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=538035&xvyber=2104
+> 
+> Download links from URL: https://volby.cz/pls/ps2017nss/ps311?xjazyk=CZ&xkraj=2&xobec=533947&xvyber=2104
+> 
+> SAVING DATA TO FILE:  Kolin_volby2017.csv
+> 
+> ENDING...: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2104
+
+
+
+
 
 ## Partial output
