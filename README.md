@@ -71,8 +71,21 @@ options:
 > 
 > ENDING...: https://www.volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=2&xnumnuts=2104
 
-
-
-
-
 ## Partial output
+
+Kód obce,Název obce,Voliči v seznamu,Vydané obálky,Platné hlasy,Občanská demokratická strana,
+Řád národa - Vlastenecká unie,CESTA ODPOVĚDNÉ SPOLEČNOSTI,Česká str.sociálně demokrat.,
+Radostné Česko,STAROSTOVÉ A NEZÁVISLÍ,Komunistická str.Čech a Moravy,Strana zelených,
+"ROZUMNÍ-stop migraci,diktát.EU",Strana svobodných občanů,Blok proti islam.-Obran.domova,
+Občanská demokratická aliance,Česká pirátská strana,Unie H.A.V.E.L.,Referendum o Evropské unii,TOP 09,ANO 2011,Dobrá volba 2016,
+SPR-Republ.str.Čsl. M.Sládka,Křesť.demokr.unie-Čs.str.lid.,Česká strana národně sociální,REALISTÉ,SPORTOVCI,
+Dělnic.str.sociální spravedl.,Svob.a př.dem.-T.Okamura (SPD),Strana Práv Občanů
+533173,Barchovice,185,132,132,"6,06 %","0,00 %","0,00 %","8,33 %","0,00 %","10,60 %","8,33 %","0,00 %","0,00 %",
+"1,51 %","0,75 %","0,00 %","20,45 %","0,00 %","0,00 %","6,06 %","28,03 %","0,00 %","1,51 %","1,51 %","0,00 %",
+"0,75 %","0,00 %","0,75 %","5,30 %","0,00 %"
+533181,Bečváry,822,492,491,"8,35 %","0,00 %","0,20 %","6,51 %","0,00 %","19,14 %","9,77 %","0,61 %","0,61 %","0,61 %",
+"0,00 %","0,00 %","6,92 %","0,00 %","0,00 %","2,03 %","34,01 %","0,00 %","0,61 %","1,22 %","0,00 %","0,40 %","0,00 %",
+"0,40 %","8,35 %","0,20 %"
+533190,Bělušice,229,123,123,"7,31 %","0,00 %","0,00 %","9,75 %","0,00 %","13,00 %","14,63 %","0,00 %","0,81 %","0,00 %",
+"0,00 %","0,00 %","6,50 %","0,00 %","0,00 %","0,00 %","37,39 %","0,00 %","0,00 %","0,81 %","0,00 %","0,00 %","0,00 %",
+"0,00 %","9,75 %","0,00 %"
